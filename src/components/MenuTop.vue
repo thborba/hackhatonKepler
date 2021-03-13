@@ -20,9 +20,27 @@
           <router-link to="/pontosColeta">
             <v-list-item>
               <v-list-item-icon>
-                <v-icon>mdi-soccer</v-icon>
+                <v-icon></v-icon>
               </v-list-item-icon>
               <v-list-item-title> Pontos de coleta</v-list-item-title>
+            </v-list-item>
+          </router-link>
+
+          <router-link to="/novo">
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon></v-icon>
+              </v-list-item-icon>
+              <v-list-item-title> Adicionar ponto de coleta</v-list-item-title>
+            </v-list-item>
+          </router-link>
+
+          <router-link to="/como-fazer">
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon></v-icon>
+              </v-list-item-icon>
+              <v-list-item-title> Como fazer a coleta</v-list-item-title>
             </v-list-item>
           </router-link>
         </v-list-item-group>
