@@ -7,7 +7,6 @@
           sm="6"
           md="4"
         >
-          <v-subheader>Speed dial direction</v-subheader>
           <v-radio-group
             v-model="direction"
             hide-details
