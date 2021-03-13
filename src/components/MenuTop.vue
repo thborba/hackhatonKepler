@@ -26,9 +26,18 @@
           <router-link to="/pontosColeta">
             <v-list-item>
               <v-list-item-icon>
-                <v-icon>mdi-place</v-icon>
+                <v-icon>mdi-home-city</v-icon>
               </v-list-item-icon>
               <v-list-item-title> Pontos de coleta</v-list-item-title>
+            </v-list-item>
+          </router-link>
+
+           <router-link to="/listaColetores">
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-account</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title> Catadores</v-list-item-title>
             </v-list-item>
           </router-link>
 
@@ -36,7 +45,7 @@
  <router-link to="/como-fazer">
             <v-list-item>
               <v-list-item-icon>
-                <v-icon>mdi-help_center</v-icon>
+                <v-icon>mdi-alert-outline</v-icon>
               </v-list-item-icon>
               <v-list-item-title> Como separar o seu lixo</v-list-item-title>
             </v-list-item>
@@ -54,18 +63,6 @@
           </router-link>
 
        <router-link to="/novo-coletor">
-          <router-link to="/listaColetores">
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon></v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>
-                Lista de coletores independentes</v-list-item-title
-              >
-            </v-list-item>
-          </router-link>
-
-          <router-link to="/como-fazer">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-account-plus-outline</v-icon>
