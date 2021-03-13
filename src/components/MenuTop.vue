@@ -39,6 +39,7 @@
               </v-list-item-icon>
               <v-list-item-title> Pontos de coleta</v-list-item-title>
             </v-list-item>
+          </router-link>
 
 
      
