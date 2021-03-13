@@ -16,7 +16,7 @@ export default {
 
 <style scoped>
 .inicio-imagem {
-    max-width:95vw;
+    max-width:80vw;
     margin-right: auto;
     margin-left: auto;
     margin-top: 8px;
@@ -28,6 +28,7 @@ export default {
     text-size-adjust: 5;
     margin-right: auto;
     margin-left: auto;
+    font-size: 85%;
 }
 
 .titulo {
