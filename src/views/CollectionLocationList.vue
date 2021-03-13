@@ -1,7 +1,7 @@
 <template>
   <v-container class="container">
     <h1 class="text-h5 text-center mb-3 mt-5">Pontos da coleta seletiva</h1>
-    <v-row class="mb-10 mt-10 ml-10" align="center">
+    <v-row class="mb-10 mt-10">
       <v-btn
         v-for="categoria of listaCategorias"
         :key="categoria.id"
@@ -15,9 +15,14 @@
         v-for="ponto of pontosColeta"
         :key="ponto.id"
         class="card mb-10 mx-auto"
-        max-width="344"
+        max-width="300"
       >
-        <v-img :src="ponto.imagem" :alt="ponto.nome" height="200px"></v-img>
+        <v-img
+          :src="ponto.imagem"
+          :alt="ponto.nome"
+          height="200px"
+          width="300"
+        ></v-img>
 
         <v-card-title> {{ ponto.nome }} </v-card-title>
 
