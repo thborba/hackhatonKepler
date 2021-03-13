@@ -1,25 +1,17 @@
 <template>
   <v-container class="container">
     <h1 class="text-h5 text-center mb-3 mt-5">Pontos da coleta seletiva</h1>
-    <v-container fluid>
-      <!-- :change="filtrarCategorias()" -->
-      <v-select
+    <!-- <v-container fluid>
+       <v-select
         v-model="select"
         :items="listaCategorias"
         label="Categorias"
         chips
+        :change="filtrarCategorias()"
         hint="Quais produtos são coletados?"
-      ></v-select>
-    </v-container>
-    <!-- <v-row class="mb-10 mt-10">
-      <v-btn
-        v-for="categoria of listaCategorias"
-        :key="categoria.id"
-        class="ml-10 mt-5"
-      >
-        {{ categoria }}
-      </v-btn>
-    </v-row> -->
+      ></v-select> 
+    </v-container> -->
+
     <v-container class="container-cards mb-10">
       <v-card
         v-for="ponto of filtroPontosColeta"
@@ -60,25 +52,32 @@ export default {
       pontosColeta: [],
       filtroPontosColeta: [],
       categorias: [],
-
       select: [],
     };
   },
-  methods: {
-    filtrarCategorias() {
-      let listaFiltrada = [],
-        count = 0;
-      for (let i = 0; i < this.pontosColeta.length; i++) {
-        for (let j = 0; j < this.pontosColeta[i].categorias.length; j++) {
-          if (this.pontosColeta[i].categorias[j] == this.select) {
-            count++;
-          }
-        }
-        if (count > 0) listaFiltrada.push(this.pontosColeta[i]);
-      }
-      this.filtroPontosColeta = listaFiltrada;
-    },
-  },
+  // methods: {
+  //   filtrarCategorias() {
+  //     console.log("ENTROU");
+  //     let listaFiltrada = [];
+  //     // count = 0;
+  //     const pontosColetaTamanho = this.pontosColeta.length;
+  //     const categoriasTamanho = this.pontosColeta[1].categorias.length;
+  //     console.log(pontosColetaTamanho);
+  //     console.log(categoriasTamanho);
+  //     for (let i = 0; i < this.pontosColeta.length; i++) {
+  //       console.log("PRIMEIRO FOR");
+  //       for (let j = 0; j < this.pontosColeta[i].categorias.length; j++) {
+  //         if (this.pontosColeta[i].categorias[j] == this.select) {
+  //           count++;
+  //         }
+  //         console.log("SEGUNDO FOR");
+  //       }
+  //       if (count > 0) listaFiltrada.push(this.pontosColeta[i]);
+  //     }
+  //     console.log("SAIU");
+  //     this.filtroPontosColeta = listaFiltrada;
+  //   },
+  // },
   computed: {
     listaCategorias() {
       const listaCategorias = [
