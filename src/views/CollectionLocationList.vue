@@ -2,14 +2,13 @@
   <v-container class="container">
     <h1 class="text-h5 text-center mb-3 mt-5">Pontos da coleta seletiva</h1>
     <v-container fluid>
+      <!-- :change="filtrarCategorias()" -->
       <v-select
-        v-model="e7"
+        v-model="select"
         :items="listaCategorias"
         label="Categorias"
-        multiple
         chips
         hint="Quais produtos são coletados?"
-        persistent-hint
       ></v-select>
     </v-container>
     <!-- <v-row class="mb-10 mt-10">
@@ -23,7 +22,7 @@
     </v-row> -->
     <v-container class="container-cards mb-10">
       <v-card
-        v-for="ponto of pontosColeta"
+        v-for="ponto of filtroPontosColeta"
         :key="ponto.id"
         class="card mb-10 mx-auto"
         max-width="300"
@@ -55,9 +54,28 @@ export default {
   data() {
     return {
       pontosColeta: [],
+      filtroPontosColeta: [],
+      categorias: [],
+
+      select: [],
     };
   },
-
+  methods: {
+    filtrarCategorias() {
+      let listaFiltrada = [],
+        count = 0;
+      for (let i = 0; i < this.pontosColeta.length; i++) {
+        for (let j = 0; i < this.pontosColeta[i].categorias.length; i++) {
+          if (this.pontosColeta[i].categorias[j] == this.select) {
+            count++;
+          }
+        }
+        if (count > 0) listaFiltrada.push(this.pontosColeta[i]);
+      }
+      this.filtroPontosColeta = listaFiltrada;
+      return;
+    },
+  },
   computed: {
     listaCategorias() {
       const listaCategorias = [
@@ -81,7 +99,7 @@ export default {
       .then((resposta) => resposta.json())
       .then((json) => {
         this.pontosColeta = json;
-        console.log(this.pontosColeta);
+        this.filtroPontosColeta = json;
       });
   },
 };

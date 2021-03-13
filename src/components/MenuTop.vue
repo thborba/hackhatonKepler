@@ -1,35 +1,20 @@
 <template>
   <div class="app-top-bar">
-    <v-app-bar
-      color="green darken-2"
-      dense
-      dark
-    > 
+    <v-app-bar color="green darken-2" dense dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
       <v-toolbar-title>Onde tem coleta?</v-toolbar-title>
-      
     </v-app-bar>
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-    >
-      <v-list
-        nav
-        dense
-      >
-        <v-list-item-group
-          v-model="group"
-          active-class="blue text--lighten-2"
-        >
-           <router-link to="/">
-              <v-list-item>
-                <v-list-item-icon>
-                  <v-icon>mdi-home</v-icon>
+    <v-navigation-drawer v-model="drawer" absolute temporary>
+      <v-list nav dense>
+        <v-list-item-group v-model="group" active-class="blue text--lighten-2">
+          <router-link to="/">
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
               </v-list-item-icon>
-                <v-list-item-title>Início</v-list-item-title>
-              </v-list-item>
+              <v-list-item-title>Início</v-list-item-title>
+            </v-list-item>
           </router-link>
 
           <router-link to="/pontosColeta">
@@ -39,9 +24,7 @@
               </v-list-item-icon>
               <v-list-item-title> Pontos de coleta</v-list-item-title>
             </v-list-item>
-
-
-     
+          </router-link>
 
           <router-link to="/novo">
             <v-list-item>
