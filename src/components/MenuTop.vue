@@ -1,13 +1,13 @@
 <template>
   <div class="app-top-bar">
     <v-app-bar
-      color="blue lighten-1"
+      color="green darken-2"
       dense
       dark
     > 
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Nome</v-toolbar-title>
+      <v-toolbar-title>Onde tem coleta?</v-toolbar-title>
       
     </v-app-bar>
     <v-navigation-drawer
