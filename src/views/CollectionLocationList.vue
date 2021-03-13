@@ -1,7 +1,18 @@
 <template>
   <v-container class="container">
     <h1 class="text-h5 text-center mb-3 mt-5">Pontos da coleta seletiva</h1>
-    <v-row class="mb-10 mt-10">
+    <v-container fluid>
+      <v-select
+        v-model="e7"
+        :items="listaCategorias"
+        label="Categorias"
+        multiple
+        chips
+        hint="Quais produtos são coletados?"
+        persistent-hint
+      ></v-select>
+    </v-container>
+    <!-- <v-row class="mb-10 mt-10">
       <v-btn
         v-for="categoria of listaCategorias"
         :key="categoria.id"
@@ -9,7 +20,7 @@
       >
         {{ categoria }}
       </v-btn>
-    </v-row>
+    </v-row> -->
     <v-container class="container-cards mb-10">
       <v-card
         v-for="ponto of pontosColeta"
