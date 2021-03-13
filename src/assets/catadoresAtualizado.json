@@ -1,0 +1,31 @@
+[ {
+  "categorias" : [ "plástico", "papelão" ],
+  "endereco" : "Zone Sul de São Paulo - SP",
+  "id" : 1,
+  "imagem" : "https://randomuser.me/api/portraits/men/72.jpg",
+  "nome" : "José da Silva"
+}, {
+  "categorias" : [ "óleo de cozinha" ],
+  "endereco" : "Zona Norte do Rio de Janeiro - RJ",
+  "id" : 2,
+  "imagem" : "https://randomuser.me/api/portraits/men/22.jpg",
+  "nome" : "João Pereira"
+}, {
+  "categorias" : [ "eletrônicos" ],
+  "endereco" : "Zona Leste de São José dos Campos - SP",
+  "id" : 3,
+  "imagem" : "https://randomuser.me/api/portraits/men/2.jpg",
+  "nome" : "Henrique Fernandes"
+}, {
+  "categorias" : [ "papelão" ],
+  "endereco" : "Região Central de São Paulo - SP",
+  "id" : 4,
+  "imagem" : "https://randomuser.me/api/portraits/men/30.jpg",
+  "nome" : "Francisco Peixoto"
+}, {
+  "categorias" : [ "óleo de cozinha" ],
+  "endereco" : "Asa Norte - Brasília - DF",
+  "id" : 5,
+  "imagem" : "https://randomuser.me/api/portraits/men/48.jpg",
+  "nome" : "Gustavo Fonseca"
+} ]
