@@ -44,7 +44,7 @@
     <v-file-input
       :rules="rules"
       accept="image/png, image/jpeg, image/bmp"
-      placeholder="Escolha uma imagem do ponto de coleta"
+      placeholder="Escolha uma imagem"
       prepend-icon="mdi-camera"
       required
       label="Imagem"
@@ -62,11 +62,11 @@
         ></v-select>
       </v-container>
 
-    <v-layout justify-center>
+    <v-layout justify-center class="mt-8">
         <v-checkbox
           v-model="checkbox"
           :error-messages="checkboxErrors"
-          label="Conferi os dados?"
+          label="Eu conferi os dados"
           required
           @change="$v.checkbox.$touch()"
           @blur="$v.checkbox.$touch()"
@@ -75,7 +75,7 @@
 
 
       
-      <v-layout align-content-space-between>
+      <v-layout justify-center class="mt-4">
         <v-btn
           class="mr-4"
           @click="submit"
@@ -87,6 +87,8 @@
         </v-btn>
 
       </v-layout>
+
+
 
   </form>
       </v-layout>
