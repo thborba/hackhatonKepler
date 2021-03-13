@@ -39,7 +39,11 @@
         <v-card-subtitle>
           {{ ponto.endereco }}
           <br />
-          <span> CEP: </span> {{ ponto.cep }}
+          <span> CEP: </span> {{ ponto.cep }} <br /><span> Categorias: </span>
+
+          <span v-for="categoria of ponto.categorias" :key="categoria.id">
+            {{ categoria }}
+          </span>
         </v-card-subtitle>
       </v-card>
     </v-container>
@@ -65,7 +69,7 @@ export default {
       let listaFiltrada = [],
         count = 0;
       for (let i = 0; i < this.pontosColeta.length; i++) {
-        for (let j = 0; i < this.pontosColeta[i].categorias.length; i++) {
+        for (let j = 0; j < this.pontosColeta[i].categorias.length; j++) {
           if (this.pontosColeta[i].categorias[j] == this.select) {
             count++;
           }
@@ -73,7 +77,6 @@ export default {
         if (count > 0) listaFiltrada.push(this.pontosColeta[i]);
       }
       this.filtroPontosColeta = listaFiltrada;
-      return;
     },
   },
   computed: {

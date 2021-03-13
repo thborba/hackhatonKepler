@@ -35,6 +35,17 @@
             </v-list-item>
           </router-link>
 
+          <router-link to="/listaColetores">
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon></v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>
+                Lista de coletores independentes</v-list-item-title
+              >
+            </v-list-item>
+          </router-link>
+
           <router-link to="/como-fazer">
             <v-list-item>
               <v-list-item-icon>

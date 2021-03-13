@@ -8,7 +8,7 @@ import CreatePickup from '../views/CreatePickup.vue'
 import Educational from '../views/Educational'
 
 import CollectionLocationList from '../views/CollectionLocationList.vue'
-
+import CollectorsList from '../views/CollectorsList.vue'
 
 Vue.use(VueRouter)
 
@@ -40,6 +40,11 @@ const routes = [
     path: '/novo-coletor',
     name: 'CreatePickup',
     component: CreatePickup
+  },
+  {
+    path: '/listaColetores',
+    name: 'CollectorsList',
+    component: CollectorsList
   },
 
 ]
