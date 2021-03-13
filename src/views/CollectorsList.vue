@@ -1,8 +1,7 @@
 <template>
   <v-container class="container">
     <h1 class="text-h5 text-center mb-3 mt-5">Coletores de lixo seletivo</h1>
-    <v-container fluid>
-      <!-- :change="filtrarCategorias()" -->
+    <!-- <v-container fluid>
       <v-select
         v-model="select"
         :items="listaCategorias"
@@ -10,16 +9,8 @@
         chips
         hint="Quais produtos são coletados?"
       ></v-select>
-    </v-container>
-    <!-- <v-row class="mb-10 mt-10">
-      <v-btn
-        v-for="categoria of listaCategorias"
-        :key="categoria.id"
-        class="ml-10 mt-5"
-      >
-        {{ categoria }}
-      </v-btn>
-    </v-row> -->
+    </v-container> -->
+
     <v-container class="container-cards mb-10">
       <v-card
         v-for="coletor of listaColetores"
