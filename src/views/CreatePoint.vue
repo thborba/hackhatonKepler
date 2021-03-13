@@ -93,11 +93,10 @@
 
         <v-layout justify-center class="mt-16">
           <router-link to="/">
-        <v-btn color="primary" elevation="2" large>Página Inicial</v-btn>
+            <v-btn color="primary" elevation="2" large>Página Inicial</v-btn>
           </router-link>
         </v-layout>
       </v-container>
-
     </form>
   </v-layout>
 </template>
