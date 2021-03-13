@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Educational from '../views/Educational'
+import CollectionLocationList from '../views/CollectionLocationList.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/como-fazer',
     name: 'Educational',
     component: Educational
+  },
+  {
+    path: '/pontosColeta',
+    name: 'CollectionLocationList',
+    component: CollectionLocationList
   }
 ]
 
