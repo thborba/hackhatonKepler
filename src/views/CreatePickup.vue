@@ -10,7 +10,7 @@
         () => !!name && name.length <= 20 || 'O nome deve ter até 20 caracteres',
       ]"
           label="Nome"
-          placeholder="Digite o Nome do ponto de coleta"
+          placeholder="Digite o Nome do profissional"
           counter="20"
           required
         ></v-text-field>
@@ -23,29 +23,29 @@
         () => !!address && address.length <= 50 || 'O endereço deve ter até 50 caracteres',
       ]"
           label="Endereço"
-          placeholder="Digite o Endereço do ponto de coleta"
+          placeholder="Digite o Bairro de atuação"
           counter="50"
           required
         ></v-text-field>
 
         <v-text-field
-          ref="zip"
-          v-model="zip"
+          ref="phone"
+          v-model="phone"
           :rules="[
-        () => !!zip || 'Esse campo é obrigatório',
-        () => !!zip && zip.length != 10 || 'O CEP deve estar no formado 99999-999',
+        () => !!phone || 'Esse campo é obrigatório',
         ]"
-          label="CEP"
+          label="Telefone"
           required
-          placeholder="Digite o CEP do ponto de coleta"
+          placeholder="Digite o Telefone do profissional de coleta"
         ></v-text-field>
 
         <v-file-input
+          v-model="image"
           :rules="[
-          () => !!zip || 'Esse campo é obrigatório',
+             () => !!phone || 'Esse campo é obrigatório',
           ]"
           accept="image/png, image/jpeg, image/bmp"
-          placeholder="Escolha uma imagem"
+          placeholder="Escolha uma foto do profissional"
           prepend-icon="mdi-camera"
           required
           label="Imagem"
@@ -53,16 +53,17 @@
 
         <v-container fluid>
           <v-select
+            :rules="[
+             () => !!phone || 'Esse campo é obrigatório',
+            ]"
             v-model="e7"
             :items="categorias"
-            :rules="[
-            () => !!zip || 'Esse campo é obrigatório',
-            ]"
             label="Categorias"
             multiple
             chips
             hint="Quais produtos são coletados?"
             persistent-hint
+            required
           ></v-select>
         </v-container>
 
@@ -70,10 +71,10 @@
           <v-layout justify-center class="mt-4">
             <v-checkbox
               v-model="checkbox"
-              :error-messages="checkboxErrors"
               :rules="[
-              () => !!zip || 'Esse campo é obrigatório',
+              () => !!phone || 'Esse campo é obrigatório',
               ]"
+              :error-messages="checkboxErrors"
               label="Eu conferi os dados"
               required
               @change="$v.checkbox.$touch()"
@@ -97,7 +98,7 @@
           border="top"
           icon="mdi-check-circle"
           transition="scale-transition"
-        >Seu ponto de coleta será analisado e adicionado à lista em breve!</v-alert>
+        >Seu profissional de coleta será analisado e cadastrado em breve!</v-alert>
 
         <v-layout justify-center class="mt-16">
           <router-link to="/">
@@ -137,6 +138,7 @@ export default {
       this.$v.$reset();
       this.name = "";
       this.email = "";
+      this.phone = "";
       this.select = null;
       this.checkbox = false;
     }

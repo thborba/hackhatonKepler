@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 import CreatePoint from '../views/CreatePoint.vue'
+import CreatePickup from '../views/CreatePickup.vue'
 
 import Educational from '../views/Educational'
 
@@ -34,7 +35,13 @@ const routes = [
     name: 'CollectionLocationList',
     component: CollectionLocationList
 
-  }
+  },
+  {
+    path: '/novo-coletor',
+    name: 'CreatePickup',
+    component: CreatePickup
+  },
+
 ]
 
 const router = new VueRouter({
