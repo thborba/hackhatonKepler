@@ -117,9 +117,174 @@
     </v-bottom-sheet>
   </div>
 
+  <div class="text-center">
+    <v-btn
+        block
+      color="black"
+      dark
+      @click="sheet5 = !sheet5"
+    >
+      PRETO
+    </v-btn>
+    <v-bottom-sheet v-model="sheet5">
+      <v-sheet
+        class="text-center"
+        height="200px"
+      > 
+        <v-btn
+          class="mt-6"
+          text
+          color="red"
+          @click="sheet5 = !sheet5"
+        >
+          Fechar
+        </v-btn>
+      <p><b>Esta é destinada ao recolhimento de madeira!</b><br/><i><b>Dicas:</b> Use luvas protetoras para não se machucar.</i></p>
+      </v-sheet>
+    </v-bottom-sheet>
+  </div>
+
+
+<div class="text-center">
+    <v-btn
+        block
+      color="brown"
+      dark
+      @click="sheet6 = !sheet6"
+    >
+      MARROM
+    </v-btn>
+    <v-bottom-sheet v-model="sheet6">
+      <v-sheet
+        class="text-center"
+        height="200px"
+      > 
+        <v-btn
+          class="mt-6"
+          text
+          color="red"
+          @click="sheet6 = !sheet6"
+        >
+          Fechar
+        </v-btn>
+      <p><b>Esta é destinada ao recolhimento de matéria orgânica!</b><br/><i></i></p>
+      </v-sheet>
+    </v-bottom-sheet>
+  </div>
+
+  <div class="text-center">
+    <v-btn
+        block
+      color="grey"
+      dark
+      @click="sheet7 = !sheet7"
+    >
+      CINZA
+    </v-btn>
+    <v-bottom-sheet v-model="sheet7">
+      <v-sheet
+        class="text-center"
+        height="200px"
+      > 
+        <v-btn
+          class="mt-6"
+          text
+          color="red"
+          @click="sheet7 = !sheet7"
+        >
+          Fechar
+        </v-btn>
+      <p><b>Lixo não reciclável, contaminado ou cuja separação não é possível.</b><br/><i></i></p>
+      </v-sheet>
+    </v-bottom-sheet>
+  </div>
+
+  <div class="text-center">
+    <v-btn
+        block
+      color="orange"
+      dark
+      @click="sheet8 = !sheet8"
+    >
+      LARANJA
+    </v-btn>
+    <v-bottom-sheet v-model="sheet8">
+      <v-sheet
+        class="text-center"
+        height="200px"
+      > 
+        <v-btn
+          class="mt-6"
+          text
+          color="red"
+          @click="sheet8 = !sheet8"
+        >
+          Fechar
+        </v-btn>
+      <p><b>Esta é destinada ao recolhimento de resíduos perigosos, como pilhas e baterias!</b><br/><i>Dica: armazenar as pilhas e baterias sem misturá-las com outros tipo de materiais, apenas embalá-las em plástico resistente para evitar contato com umidade a fim de evitar vazamentos.</i></p>
+      </v-sheet>
+    </v-bottom-sheet>
+  </div>
+
+  <div class="text-center">
+    <v-btn
+        block
+      color="white"
+      dark
+      @click="sheet9 = !sheet9"
+    >
+      BRANCO
+    </v-btn>
+    <v-bottom-sheet v-model="sheet9">
+      <v-sheet
+        class="text-center"
+        height="200px"
+      > 
+        <v-btn
+          class="mt-6"
+          text
+          color="red"
+          @click="sheet9 = !sheet9"
+        >
+          Fechar
+        </v-btn>
+      <p><b>Esta é destinada ao recolhimento de resíduos hospitalares e serviços de saúde!</b><br/><i></i></p>
+      </v-sheet>
+    </v-bottom-sheet>
+  </div> 
+
+
+   <div class="text-center">
+    <v-btn
+        block
+      color="purple"
+      dark
+      @click="sheet10 = !sheet10"
+    >
+      ROXO
+    </v-btn>
+    <v-bottom-sheet v-model="sheet10">
+      <v-sheet
+        class="text-center"
+        height="200px"
+      > 
+        <v-btn
+          class="mt-6"
+          text
+          color="red"
+          @click="sheet10 = !sheet10"
+        >
+          Fechar
+        </v-btn>
+      <p><b>Esta é destinada ao recolhimento de resíduos radioativos!</b><br/><i></i></p>
+      </v-sheet>
+    </v-bottom-sheet>
+  </div> 
+
 <div class="text-center">
   <br>
   <br>
+  <h3>Dá só uma sacada como tudo funciona:</h3><br><v-divider></v-divider><br>
 <iframe width="auto" src="https://www.youtube.com/embed/jYFQGF4dMrs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -136,6 +301,10 @@ export default {
       sheet4: false,
       sheet5: false,
       sheet6: false,
+      sheet7: false,
+      sheet8: false,
+      sheet9: false,
+      sheet10: false,
       tiles: [
         { img: 'keep.png', title: 'Keep' },
         { img: 'inbox.png', title: 'Inbox' },
