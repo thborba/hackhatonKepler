@@ -5,6 +5,12 @@
         src='../assets/onde-tem-coleta.png'
 ></v-img>
     <p class="p">Coleta seletiva em nada mais é do que a coleta dos resíduos depois da separação prévia pelos cidadãos de acordo com o tipo de resíduo. Os resíduos coletados podem ser recicláveis (metal, papel, papelão, plástico, caixa de leite e outros) ou rejeitos (não recicláveis). E a coleta seletiva pode ser feita do tipo porta a porta (serviço público ou privado) ou por ponto de entrega voluntária (PEVs). Aqui você poderá realizar uma busca pelo PEV mais próximo!</p>
+  <router-link to="/como-fazer">
+  <v-btn 
+  color="gray" 
+  block>
+    Veja mais
+  </v-btn> </router-link>
   </v-container>
 </template>
 
